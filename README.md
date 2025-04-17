@@ -29,11 +29,63 @@ To compile the project, use the following command:
 ```bash
 make
 ```
+
 To execute the program, use:
 
 ```bash
 ./myrb < input_file > output_file
 ```
+Replace `input_file` with the name of your input file and `output_file` with the desired output file.
+
+Example:
+
+Input (`test.in`):
+
+```bash
+i 4
+i 6
+i 1
+i 2
+i 7
+i 3
+i 5
+i 8
+r 8
+```
+Output (`test.out`):
+
+```bash
+                4(P)
+
+           /             \
+
+       2 (P)               6 (V)
+
+      /       \           /     \
+
+1 (V)       3 (V)      5 (P)    7 (P)
+```
+
+Or, as a list of nodes:
+
+```bash
+1,2,1
+2,1,0
+3,2,1
+4,0,0
+5,2,0
+6,1,1
+7,2,0
+```
+
+Compare the generated output file (test.out) with the expected output file (test.sol) using the diff command:
+
+```bash
+diff test.sol test.out
+```
+If the diff command does not return anything, it means the test was successful.
+
+
 
 ## Students: Nathan Endo, Nicolas Cosenza
 
