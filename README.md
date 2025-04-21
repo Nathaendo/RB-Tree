@@ -18,9 +18,9 @@ The project is divided into three main files:
 ## Features
 
 - Insertion of nodes into the Red-Black Tree.
-- Deletion of nodes while maintaining tree properties.
+- Deletion of nodes while maintaining tree properties (successor).
 - Search for specific keys in the tree.
-- Printing the tree structure.
+- Printing the tree in-order traversal.
 
 ## How to Run
 
@@ -52,7 +52,7 @@ i 5
 i 8
 r 8
 ```
-Output (`test.out`):
+Expected RB-tree:
 
 ```bash
                 4(P)
@@ -66,7 +66,11 @@ Output (`test.out`):
 1 (V)       3 (V)      5 (P)    7 (P)
 ```
 
-Or, as a list of nodes:
+Output (`test.out`):
+
+a,b,c -> (a = key), (b = level), (c = color).
+
+(0 = black, 1 = red)
 
 ```bash
 1,2,1
